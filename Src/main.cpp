@@ -95,7 +95,6 @@ int main(void){
         if (buf_tx_done){
             enc.writeLongReg(ETXNDL, ETXNDH, (encconf.tx_start + length_send - 1));
             enc.enableTransmit(true);
-            //enc.writeLongReg(ETXNDL, ETXNDH, (encconf.tx_end));
             enc.clearbufferbusy();
             buf_tx_done = false;
         }
